@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b58a89cb-193e-4472-82bd-9b355dbd2ee5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/avl/AvlNodeBlackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avl/AvlNodeBlackTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/avl/AvlTreeBackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avl/AvlTreeBlackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/avl/AvlTreeBlackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avl/AvlTreeBlackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AvlTreeBlackTest.validInsertThreeNodes">
     <configuration name="AvlNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="avlTree" />
       <extension name="coverage">
@@ -74,8 +72,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AvlTreeBlackTest.validInsertNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="avlTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="avl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="avl" />
+      <option name="MAIN_CLASS_NAME" value="avl.AvlTreeBlackTest" />
+      <option name="METHOD_NAME" value="validInsertNode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AvlTreeBlackTest.validInsertThreeNodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="avlTree" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="avl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="avl" />
+      <option name="MAIN_CLASS_NAME" value="avl.AvlTreeBlackTest" />
+      <option name="METHOD_NAME" value="validInsertThreeNodes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AvlTreeBlackTest.validInsertThreeNodes" />
+        <item itemvalue="JUnit.AvlTreeBlackTest.validInsertNode" />
         <item itemvalue="JUnit.AvlNodeTest" />
       </list>
     </recent_temporary>
@@ -88,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683278133444</updated>
-      <workItem from="1683278138439" duration="1603000" />
+      <workItem from="1683278138439" duration="2459000" />
     </task>
     <servers />
   </component>
