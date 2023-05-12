@@ -101,4 +101,24 @@ public class AvlTreeBlackTest {
         assertEquals(3, (int) tree.top.getLeft().getItem());
         assertNull(tree.top.getRight());
     }
+
+    @Test
+    public void GivenTreeAndNodeThatHasSuccessorWhenUseFindSuccessorItReturnsTheSuccessorNode(){
+        AvlTree<Object> tree = new AvlTree<Object>(comparator);
+        AvlNode node1 = new AvlNode(5);
+        AvlNode node2 = new AvlNode(3);
+        AvlNode node3 = new AvlNode(8);
+
+        tree.insertTop(node1);
+        tree.insertAvlNode(node2);
+        tree.insertAvlNode(node3);
+
+        AvlNode<Integer> expected = node3;
+        AvlNode<Integer> actual = tree.findSuccessor(node1);
+
+
+        assertEquals(expected,actual);
+    }
+
+
 }
