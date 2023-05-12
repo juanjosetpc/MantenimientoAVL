@@ -697,5 +697,6 @@ public class AvlTreeTest {
 
     avlTree.delete(20);
     assertEquals("testDeletingTopNode", " | 12 | 8 | 4 | 10 | 22 | 14 | 24", avlTree.toString());
+
   }
 }

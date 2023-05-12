@@ -2,6 +2,7 @@ package avl;
 
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.Comparator;
@@ -16,7 +17,6 @@ public class AvlTreeBlackTest {
         }
     };
     @Test
-    @DisplayName("Con un árbol vacío y un comparador nulo se inserta un único nodo, inserta el nodo al no tener que comparar")
     public void validInsertSingleNodeWithComparatorNull(){
         AvlTree arbol = new AvlTree(null);
         arbol.insert(4);
@@ -26,7 +26,6 @@ public class AvlTreeBlackTest {
     }
 
     @Test
-    @DisplayName("Con un árbol vacío y un comparador nulo se inserta un único nodo, inserta el nodo al no tener que comparar")
     public void validInsertSingleNode(){
         AvlTree arbol = new AvlTree(comparator);
         arbol.insertAvlNode(new AvlNode(4));
@@ -36,7 +35,6 @@ public class AvlTreeBlackTest {
     }
 
     @Test
-    @DisplayName("Con un árbol vacío se inserta un único nodo, entonces sería el primero")
     public void invalidInsertNodesWithComparatorNull(){
         AvlTree arbol = new AvlTree(null);
         arbol.insert(4);
@@ -44,7 +42,6 @@ public class AvlTreeBlackTest {
     }
 
     @Test
-    @DisplayName("Con un árbol vacío se inserta un único nodo, entonces sería el primero")
     public void validInsertThreeNodes(){
         AvlTree arbol = new AvlTree(comparator);
         arbol.insert(4);
@@ -113,7 +110,7 @@ public class AvlTreeBlackTest {
     }
 
     @Test
-    public void GivenTreeAndNodeThatHasSuccessorWhenUseFindSuccessorItReturnsTheSuccessorNode(){
+    public void GivenTreeAndNodeThatHasOneLeftChildAndOneRightChildWhenUseFindSuccessorWithRootItReturnsTheRightNode(){
         AvlTree<Object> tree = new AvlTree<Object>(comparator);
         AvlNode node1 = new AvlNode(5);
         AvlNode node2 = new AvlNode(3);
@@ -134,5 +131,27 @@ public class AvlTreeBlackTest {
     public void noFirstToSearch(){
         AvlTree tree = new AvlTree(comparator);
         assertNull(tree.search(2));
+    }
+
+    public void GivenTreeAndNodeThatHasOnlyRootWhenUseFindSuccessorWithRootItReturnsNull(){
+        AvlTree<Object> tree = new AvlTree<Object>(comparator);
+        AvlNode node1 = new AvlNode(5);
+
+        tree.insertTop(node1);
+
+
+        AvlNode<Integer> expected = null;
+        AvlNode<Integer> actual = tree.findSuccessor(node1);
+
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testSearchNodeOnEmptyTree(){
+        AvlTree avlTree = new AvlTree(comparator);
+        AvlNode<Integer> node1;
+        node1 = new AvlNode<Integer>(7);
+        assertNull(   avlTree.searchNode(node1));
     }
 }
