@@ -26,6 +26,16 @@ public class AvlTreeBlackTest {
     }
 
     @Test
+    @DisplayName("Con un árbol vacío y un comparador nulo se inserta un único nodo, inserta el nodo al no tener que comparar")
+    public void validInsertSingleNode(){
+        AvlTree arbol = new AvlTree(comparator);
+        arbol.insertAvlNode(new AvlNode(4));
+        Object itemExpected = 4;
+
+        assertEquals(itemExpected,arbol.top.getItem());
+    }
+
+    @Test
     @DisplayName("Con un árbol vacío se inserta un único nodo, entonces sería el primero")
     public void invalidInsertNodesWithComparatorNull(){
         AvlTree arbol = new AvlTree(null);
@@ -120,5 +130,9 @@ public class AvlTreeBlackTest {
         assertEquals(expected,actual);
     }
 
-
+    @Test
+    public void noFirstToSearch(){
+        AvlTree tree = new AvlTree(comparator);
+        assertNull(tree.search(2));
+    }
 }
