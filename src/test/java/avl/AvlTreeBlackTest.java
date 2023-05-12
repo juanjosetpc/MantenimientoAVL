@@ -51,7 +51,7 @@ public class AvlTreeBlackTest {
 
     @Test
     public void testSearchExistingNode() {
-        AvlTree<Integer> tree = new AvlTree<>(null);
+        AvlTree<Integer> tree = new AvlTree<>(comparator);
         tree.insert(5);
         AvlNode<Integer> node = tree.search(5);
         assertNotNull(node);
@@ -60,7 +60,7 @@ public class AvlTreeBlackTest {
 
     @Test
     public void testSearchNonExistingNode() {
-        AvlTree<Integer> tree = new AvlTree<>(null);
+        AvlTree<Integer> tree = new AvlTree<>(comparator);
         tree.insert(5);
         AvlNode<Integer> node = tree.search(10);
         assertNull(node);
@@ -68,7 +68,7 @@ public class AvlTreeBlackTest {
 
     @Test
     public void testDeleteLeafNode() {
-        AvlTree<Integer> tree = new AvlTree<>(null);
+        AvlTree<Integer> tree = new AvlTree<>(comparator);
         tree.insert(5);
         tree.insert(3);
         tree.insert(7);
@@ -80,7 +80,7 @@ public class AvlTreeBlackTest {
 
     @Test
     public void testDeleteNodeWithALeftChild() {
-        AvlTree<Integer> tree = new AvlTree<>(null);
+        AvlTree<Integer> tree = new AvlTree<>(comparator);
         tree.insert(5);
         tree.insert(3);
         tree.insert(7);
@@ -92,7 +92,7 @@ public class AvlTreeBlackTest {
 
     @Test
     public void testDeleteNodeWithARightChild() {
-        AvlTree<Integer> tree = new AvlTree<>(null);
+        AvlTree<Integer> tree = new AvlTree<>(comparator);
         tree.insert(5);
         tree.insert(3);
         tree.insert(7);
